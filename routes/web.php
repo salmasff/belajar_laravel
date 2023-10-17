@@ -12,19 +12,9 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-    //Parameter 1 = URL
-    //Parameter 2 = Controller
-    //Parameter 3 = Method
-Route::get('/home',[HomeController::class 'home']);
-   
+    
+Route::get('/home', [HomeController::class,'home']);
 
-//Jalur Route Ke Halaman About Us
-Route::get('/About Us',function () {
-Return 'About Us';
-});
+Route::get('/about', [HomeController::class,'about']);
 
-//Jalur Route Ke Halaman Contact
-Route::get('/Contact', function () {
-    return 'Contact';
-});
-
+Route::get('/contact', [HomeController::class,'contact']);
